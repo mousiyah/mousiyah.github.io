@@ -8,7 +8,7 @@ export default function Header() {
         <div className="text-6xl">
           <TypewriterText
             text="hi, i'm muslima."
-            speed={70}
+            speed={100}
             className="block"
             highlightWords={["muslima"]}
           />

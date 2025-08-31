@@ -9,7 +9,7 @@ interface TypewriterTextProps {
 
 export default function TypewriterText({
   text,
-  speed = 100,
+  speed,
   className = "",
   highlightWords = [],
 }: TypewriterTextProps) {
@@ -65,13 +65,17 @@ export default function TypewriterText({
   };
 
   return (
-    <div className={`inline-flex items-center ${className}`}>
+    <div className={`inline ${className}`}>
       {renderText(text)}
       {!isTypingComplete && (
-        <span className="ml-1 font-bold text-primary animate-pulse">|</span>
+        <span className="inline-block ml-1 font-bold text-primary animate-pulse leading-none">
+          |
+        </span>
       )}
       {isTypingComplete && (
-        <span className="ml-1 font-bold text-primary animate-bounce">|</span>
+        <span className="inline-block ml-1 font-bold text-primary animate-bounce leading-none">
+          |
+        </span>
       )}
     </div>
   );
