@@ -6,9 +6,6 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{ padding: "20px", background: "red", color: "white" }}>
-        Debug: App is rendering
-      </div>
       <Header />
     </div>
   );
