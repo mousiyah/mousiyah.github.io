@@ -60,6 +60,8 @@ export default function TypewriterText({
             </span>
           );
         })}
+        {/* Add non-breaking space before cursor to keep it with last word */}
+        <span className="whitespace-nowrap">&nbsp;</span>
       </span>
     );
   };

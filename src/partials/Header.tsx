@@ -1,10 +1,11 @@
 import TypewriterText from "../ui/TypewriterText";
+import JustifiedText from "../ui/JustifiedText";
 import { Linkedin, Github } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="w-full h-screen flex items-center justify-center px-4 sm:px-12 md:px-36 lg:px-24">
-      <div className="text-center max-w-4xl mx-auto">
+    <header className="w-full h-screen flex items-center justify-center">
+      <div className="text-center max-w-xl mx-auto px-6 sm:px-8 md:px-8 lg:px-8">
         <div className="text-6xl">
           <TypewriterText
             text="hi, i'm muslima."
@@ -14,12 +15,13 @@ export default function Header() {
           />
         </div>
         <p className="text-2xl font-semibold mt-2">
-          I do create stuff and do research
+          I create stuff and do research
         </p>
-        <p className="mt-2 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-          I'm a computer science graduate, a Master in Business Analytics, and a
-          PhD student in Operational Research
-        </p>
+        <JustifiedText className="mt-2 text-base text-lg max-w-2xl mx-auto leading-relaxed">
+          I'm a Computer Science graduate, a Master in Business Analytics, and
+          currently a PhD student in Operational Research. Sometimes I build a
+          software, make a game, train a ML model and more. Doing what I enjoy.
+        </JustifiedText>
         <p className="mt-2 text-base">muslimakarimova@gmail.com</p>
 
         {/* Social Media Buttons */}
