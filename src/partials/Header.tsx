@@ -3,7 +3,7 @@ import { Linkedin, Github } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="w-full h-screen flex items-center justify-center px-6 md:px-12 lg:px-96">
+    <header className="w-full h-screen flex items-center justify-center px-4 sm:px-12 md:px-36 lg:px-24">
       <div className="text-center max-w-4xl mx-auto">
         <div className="text-6xl">
           <TypewriterText
