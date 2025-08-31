@@ -1,5 +1,3 @@
-import React from "react";
-
 interface JustifiedTextProps {
   children: string;
   className?: string;
