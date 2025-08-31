@@ -12,5 +12,13 @@ export default defineConfig({
         main: "./index.html",
       },
     },
+    // Ensure proper MIME types
+    assetsInlineLimit: 0,
+  },
+  // Ensure proper MIME types for GitHub Pages
+  server: {
+    headers: {
+      "Content-Type": "application/javascript",
+    },
   },
 });
