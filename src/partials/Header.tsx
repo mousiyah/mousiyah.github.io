@@ -18,7 +18,7 @@ export default function Header() {
           I create stuff and do research
         </p>
         <JustifiedText className="mt-2 text-base text-lg max-w-2xl mx-auto leading-relaxed">
-          I come from CS background. Currently a PhD researcher in Business Analytics and Machine Learning. I enjoy building & creating.
+          I am a Computer Science graduate. Currently a PhD researcher in Business Analytics and Machine Learning. I like creating stuff.
         </JustifiedText>
         <p className="mt-2 text-base">muslimakarimova@gmail.com</p>
 
