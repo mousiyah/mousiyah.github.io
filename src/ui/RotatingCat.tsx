@@ -50,7 +50,7 @@ export default function RotatingCat({ onDiscoChange }: RotatingCatProps) {
       discoTimerRef.current = window.setTimeout(() => {
         onDiscoChange(true);
         discoTimerRef.current = null;
-      }, 5000);
+      }, 6000);
     } catch {
       setIsPlaying(false);
       onDiscoChange(false);
