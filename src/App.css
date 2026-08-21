@@ -61,6 +61,62 @@ body {
   outline-offset: 3px;
 }
 
+.voice-hint {
+  position: absolute;
+  top: 4.75rem;
+  left: calc(50% + 7.75rem);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-onSurface);
+  width: 11rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.15;
+}
+
+.voice-hint__curve {
+  width: 3.75rem;
+  height: 3rem;
+  margin-bottom: 0.25rem;
+  overflow: visible;
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transform: translateX(-1.2rem);
+}
+
+@media (min-width: 768px) {
+  .voice-hint {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .voice-hint {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .voice-hint {
+    left: calc(50% + 4.5rem);
+    width: 9rem;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .voice-hint__curve {
+    align-self: flex-start;
+    transform: translateX(1.8rem) scale(0.85);
+    transform-origin: top left;
+  }
+}
+
 @keyframes oiiai-spin {
   from {
     transform: translateX(-50%) rotate(0deg);
