@@ -3,14 +3,22 @@ import { Volume2, VolumeX } from "lucide-react";
 import catImage from "../assets/images/cat.png";
 import oiiaAudio from "../assets/music/oiia.mp3";
 
-export default function RotatingCat() {
+interface RotatingCatProps {
+  onDiscoChange: (isActive: boolean) => void;
+}
+
+export default function RotatingCat({ onDiscoChange }: RotatingCatProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const discoTimerRef = useRef<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
 
     return () => {
+      if (discoTimerRef.current !== null) {
+        window.clearTimeout(discoTimerRef.current);
+      }
       audio?.pause();
     };
   }, []);
@@ -24,25 +32,42 @@ export default function RotatingCat() {
 
     if (isPlaying) {
       audio.pause();
+      audio.currentTime = 0;
+      if (discoTimerRef.current !== null) {
+        window.clearTimeout(discoTimerRef.current);
+        discoTimerRef.current = null;
+      }
       setIsPlaying(false);
+      onDiscoChange(false);
       return;
     }
 
     try {
+      audio.currentTime = 0;
       await audio.play();
       setIsPlaying(true);
+      onDiscoChange(false);
+      discoTimerRef.current = window.setTimeout(() => {
+        onDiscoChange(true);
+        discoTimerRef.current = null;
+      }, 5000);
     } catch {
       setIsPlaying(false);
+      onDiscoChange(false);
     }
   };
 
   return (
     <>
-      <img
-        className="rotating-cat"
-        src={catImage}
-        alt="Rotating oiiai ooiiai cat meme"
-      />
+      <div className={`cat-visual${isPlaying ? " cat-lasers-active" : ""}`}>
+        <img
+          className="rotating-cat"
+          src={catImage}
+          alt="Rotating oiiai ooiiai cat meme"
+        />
+        <span className="cat-laser cat-laser-left" />
+        <span className="cat-laser cat-laser-right" />
+      </div>
       <button
         className="voice-toggle md:mt-3"
         type="button"

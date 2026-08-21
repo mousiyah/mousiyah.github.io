@@ -3,10 +3,14 @@ import JustifiedText from "../ui/JustifiedText";
 import RotatingCat from "../ui/RotatingCat";
 import { Linkedin, Github } from "lucide-react";
 
-export default function Header() {
+interface HeaderProps {
+  onDiscoChange: (isActive: boolean) => void;
+}
+
+export default function Header({ onDiscoChange }: HeaderProps) {
   return (
     <header className="w-full h-screen flex items-center justify-center">
-      <RotatingCat />
+      <RotatingCat onDiscoChange={onDiscoChange} />
       <div className="text-center max-w-xl mx-auto px-6 sm:px-8 md:px-8 lg:px-8">
         <div className="text-6xl">
           <TypewriterText
