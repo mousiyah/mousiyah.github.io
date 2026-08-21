@@ -43,7 +43,9 @@ body {
   color: var(--color-onSurface);
   background-color: var(--color-surface);
   cursor: pointer;
-  transition: color 150ms ease, background-color 150ms ease,
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
     transform 150ms ease;
 }
 
