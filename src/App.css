@@ -17,6 +17,50 @@ body {
   background-color: var(--color-surface);
 }
 
+.rotating-cat {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  z-index: 10;
+  width: 8rem;
+  height: auto;
+  transform: translateX(-50%);
+  animation: oiiai-spin 3s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes oiiai-spin {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  12% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+
+  24% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  36% {
+    transform: translateX(-50%) rotate(-360deg);
+  }
+
+  48% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rotating-cat {
+    animation: none;
+  }
+}
+
 .btn-primary {
   @apply px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/80;
 }

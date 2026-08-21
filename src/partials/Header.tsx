@@ -1,10 +1,12 @@
 import TypewriterText from "../ui/TypewriterText";
 import JustifiedText from "../ui/JustifiedText";
+import RotatingCat from "../ui/RotatingCat";
 import { Linkedin, Github } from "lucide-react";
 
 export default function Header() {
   return (
     <header className="w-full h-screen flex items-center justify-center">
+      <RotatingCat />
       <div className="text-center max-w-xl mx-auto px-6 sm:px-8 md:px-8 lg:px-8">
         <div className="text-6xl">
           <TypewriterText
@@ -14,11 +16,9 @@ export default function Header() {
             highlightWords={["muslima"]}
           />
         </div>
-        <p className="text-2xl font-semibold mt-2">
-          I create stuff and do research
-        </p>
+        <p className="text-2xl font-semibold mt-2">oiiai ooiiai</p>
         <JustifiedText className="mt-2 text-base text-lg max-w-2xl mx-auto leading-relaxed">
-          I am a Computer Science graduate. Currently a PhD researcher in Business Analytics and Machine Learning. I like creating stuff.
+          你为什么在这里？
         </JustifiedText>
         <p className="mt-2 text-base">muslimakarimova@gmail.com</p>
 
