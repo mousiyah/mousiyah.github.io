@@ -187,9 +187,8 @@ body {
 .cat-laser {
   position: absolute;
   top: 37%;
-  width: 60vw;
-  max-width: 34rem;
-  height: 0.28rem;
+  width: 8rem;
+  height: 0.24rem;
   border-radius: 999px;
   background: #ff1b1b;
   box-shadow:
@@ -220,7 +219,19 @@ body {
 }
 
 .cat-lasers-active .cat-laser {
-  animation: laser-shoot 300ms ease-out infinite;
+  animation: laser-shoot 1200ms ease-out infinite;
+}
+
+.laser-pair-two {
+  animation-delay: 300ms !important;
+}
+
+.laser-pair-three {
+  animation-delay: 600ms !important;
+}
+
+.laser-pair-four {
+  animation-delay: 900ms !important;
 }
 
 .cat-laser-left,
@@ -356,29 +367,29 @@ body {
 
 @keyframes laser-shoot {
   0%,
-  12% {
+  8% {
     opacity: 0;
     filter: brightness(0.8);
-    transform: rotate(var(--laser-angle)) scaleX(0.02);
+    transform: translateX(0) rotate(var(--laser-angle));
   }
 
-  45% {
+  16% {
     opacity: 1;
     filter: brightness(1.5);
-    transform: rotate(var(--laser-angle)) scaleX(1);
+    transform: translateX(0) rotate(var(--laser-angle));
   }
 
-  65% {
+  72% {
     opacity: 1;
     filter: brightness(1.2);
-    transform: rotate(var(--laser-angle)) scaleX(1);
+    transform: translateX(100vw) rotate(var(--laser-angle));
   }
 
-  70%,
+  76%,
   100% {
     opacity: 0;
     filter: brightness(0.8);
-    transform: rotate(var(--laser-angle)) scaleX(0.02);
+    transform: translateX(115vw) rotate(var(--laser-angle));
   }
 }
 
@@ -444,7 +455,7 @@ body {
 
   .cat-lasers-active .cat-laser {
     opacity: 1;
-    transform: rotate(var(--laser-angle)) scaleX(1);
+    transform: translateX(0) rotate(var(--laser-angle));
   }
 }
 

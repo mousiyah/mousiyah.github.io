@@ -65,8 +65,14 @@ export default function RotatingCat({ onDiscoChange }: RotatingCatProps) {
           src={catImage}
           alt="Rotating oiiai ooiiai cat meme"
         />
-        <span className="cat-laser cat-laser-left" />
-        <span className="cat-laser cat-laser-right" />
+        <span className="cat-laser cat-laser-left laser-pair-one" />
+        <span className="cat-laser cat-laser-right laser-pair-one" />
+        <span className="cat-laser cat-laser-left laser-pair-two" />
+        <span className="cat-laser cat-laser-right laser-pair-two" />
+        <span className="cat-laser cat-laser-left laser-pair-three" />
+        <span className="cat-laser cat-laser-right laser-pair-three" />
+        <span className="cat-laser cat-laser-left laser-pair-four" />
+        <span className="cat-laser cat-laser-right laser-pair-four" />
       </div>
       <button
         className="voice-toggle md:mt-3"
