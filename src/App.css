@@ -29,6 +29,36 @@ body {
   transform-origin: center;
 }
 
+.voice-toggle {
+  position: absolute;
+  top: 1.5rem;
+  left: calc(50% + 5rem);
+  z-index: 10;
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 2px solid var(--color-onSurface);
+  border-radius: 999px;
+  color: var(--color-onSurface);
+  background-color: var(--color-surface);
+  cursor: pointer;
+  transition: color 150ms ease, background-color 150ms ease,
+    transform 150ms ease;
+}
+
+.voice-toggle:hover,
+.voice-toggle[aria-pressed="true"] {
+  color: white;
+  background-color: var(--color-primary);
+  transform: scale(1.08);
+}
+
+.voice-toggle:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 @keyframes oiiai-spin {
   from {
     transform: translateX(-50%) rotate(0deg);
