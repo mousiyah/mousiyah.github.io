@@ -87,7 +87,7 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2;
-  transform: translateX(-1.2rem);
+  transform: translateX(-0.8rem);
 }
 
 @media (min-width: 768px) {
@@ -112,7 +112,7 @@ body {
 
   .voice-hint__curve {
     align-self: flex-start;
-    transform: translateX(1.8rem) scale(0.85);
+    transform: translateX(3rem) scale(1.5);
     transform-origin: top left;
   }
 }

@@ -44,7 +44,7 @@ export default function RotatingCat() {
         alt="Rotating oiiai ooiiai cat meme"
       />
       <button
-        className="voice-toggle"
+        className="voice-toggle md:mt-3"
         type="button"
         aria-label={isPlaying ? "Turn cat voice off" : "Turn cat voice on"}
         aria-pressed={isPlaying}
